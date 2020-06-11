@@ -1,5 +1,5 @@
 /* FORM TYPOGRAPHY*/
-
+  
   
   input[type=button]:hover,input[type=reset]:hover  {
     background-color: #39ace7;
@@ -14,5 +14,13 @@
   }
   input[type=text]:placeholder,input[type=date]:placeholder,input[type=number]:placeholder  {
     color: #312a2a;
+  }
+  table{
+    width: 100%;
+  }
+  .icon-style{
+    float: left;
+    margin: 2px;
+    cursor: pointer;
   }
   

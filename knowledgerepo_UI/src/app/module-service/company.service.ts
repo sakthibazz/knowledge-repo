@@ -20,7 +20,7 @@ export class CompanyService {
       }
     );
   }
-  public getCompany() {
+  public getCompany() : Observable<any> {
     return this.http.get(this.baseUrl + '/api/dropbox/admin/getCompanyName');
   }
 }

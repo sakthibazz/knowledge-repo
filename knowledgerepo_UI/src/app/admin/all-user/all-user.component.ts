@@ -37,7 +37,7 @@ export class AllUserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.displayedColumns = ['name', 'email', 'department', 'project', 'team', 'role', 'edit', 'delete'];
+    this.displayedColumns = ['name', 'email', 'phone','role', 'edit', 'delete'];
     this.userSubscription = this.userService.getAllUser().subscribe(respObj => {
       console.log(respObj)
       this.dataSource = new MatTableDataSource(respObj);

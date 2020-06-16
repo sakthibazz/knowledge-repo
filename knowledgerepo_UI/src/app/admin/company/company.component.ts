@@ -82,7 +82,7 @@ export class CompanyComponent implements OnInit {
   updateClient(){
     this.editClientSubscription = this.editClientService.editClient(this.editClientData.value).subscribe(resp => {
       console.log("response Object ", resp);
-      this.setMessage = { message: "Role Updated", msg: true };
+      this.setMessage = { message: "Client updated sucessfully", msg: true };
       this.ngOnInit();
       this.showClient = true;
       this.editClient = false;

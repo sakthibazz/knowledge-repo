@@ -6,7 +6,7 @@
         <form [formGroup]="createDepartmentData" (ngSubmit)="onSubmit()">
             <div class="form-row">
                 <div class="form-group col">
-                    <label>Company Name</label>
+                    <label>Client Name</label>
                     <select formControlName="companyName" class="form-control" required >
                             <option *ngFor="let company of companyNames" [(ngValue)]="company.companyName">{{company.companyName}}</option>
                     </select>

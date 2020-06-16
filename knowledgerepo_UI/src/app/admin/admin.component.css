@@ -100,3 +100,7 @@ a:hover {
   .topnav-right {
     float: right;
   }
+  .side_nav{
+      max-width: 22%;
+  }
+ 

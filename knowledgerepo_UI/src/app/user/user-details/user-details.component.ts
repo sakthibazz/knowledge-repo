@@ -10,6 +10,7 @@ import { ShowService } from '../show.service';
 })
 export class UserDetailsComponent implements OnInit {
   eMail: string;
+  phone:number;
   userSubscription: Subscription;
   setMessage: any;
   UserDetails: string[];

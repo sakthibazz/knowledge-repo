@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, MaxLengthValidator } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CreateUserService } from '../create-user/create-user.service';
@@ -40,13 +40,14 @@ export class CreateUserComponent implements OnInit {
       this.setMessage = { message: 'Server Error /Server Unreachable!', error: true };
     })
     this.createUserData = this.formBuilder.group({
-      userCompany: ['', [Validators.required, Validators.minLength(1)]],
-      userdepartment: ['', [Validators.required, Validators.minLength(2)]],
-      userProjectName: ['', [Validators.required, Validators.minLength(2)]],
-      userTeamName: ['', [Validators.required, Validators.minLength(2)]],
+      // userCompany: ['', [Validators.required, Validators.minLength(1)]],
+      // userdepartment: ['', [Validators.required, Validators.minLength(2)]],
+      // userProjectName: ['', [Validators.required, Validators.minLength(2)]],
+      // userTeamName: ['', [Validators.required, Validators.minLength(2)]],
       eMail: ['', [Validators.required, Validators.minLength(2)]],
       userName: ['', [Validators.required, Validators.minLength(2)]],
-      userRole: ['', [Validators.required, Validators.minLength(1)]]
+      userRole: ['', [Validators.required, Validators.minLength(1)]],
+      pHone:['',[Validators.required, Validators.minLength(10),Validators.maxLength(10)]],
     });
   }
   onSubmit() {

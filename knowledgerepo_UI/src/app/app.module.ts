@@ -39,6 +39,8 @@ import { SearchFileComponent } from './user/search/search-file/search-file.compo
 import { SearchTypeComponent } from './user/search/search-type/search-type.component';
 import { AllUserComponent } from './admin/all-user/all-user.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LandingPageComponent } from './admin/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,11 @@ import { UserDetailsComponent } from './user/user-details/user-details.component
   
     AllUserComponent,
   
-    UserDetailsComponent
+    UserDetailsComponent,
+  
+    SignUpComponent,
+  
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

@@ -12,10 +12,12 @@ import { SearchComponent } from './user/search/search.component';
 import { ShowComponent } from './user/show/show.component';
 import { UploadComponent } from './user/upload/upload.component';
 import { AppGuard } from './app.guard';
+import { SignUpComponent} from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', component: LogInBodyComponent },
   { path: 'login', component: LogInBodyComponent },
+  {path: 'signup',component:SignUpComponent},
   {path: 'admin', component: AdminComponent,  canActivate: [AppGuard],children: [
     { path: 'create-company', component: CompanyComponent,data: {
       breadcrumb: "Create Company",icon: null

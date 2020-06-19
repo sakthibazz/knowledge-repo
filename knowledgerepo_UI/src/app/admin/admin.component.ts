@@ -125,5 +125,11 @@ export class AdminComponent implements OnInit {
   logOut() {
     sessionStorage.clear();
   }
+  SignUpComponent() {
+    sessionStorage.clear();
+  }
+  LogInBodyComponent(){
+    sessionStorage.clear();
+  }
 }
 

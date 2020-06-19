@@ -31,6 +31,14 @@
 <div class="row">
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 side_nav">
         <div class="left">
+            <div class="item" (click)="UserComponent();">
+                <i class="material-icons">person_add</i>
+                <a>Create User</a>
+            </div>
+            <div class="item" (click)="CompanyComponent();">
+                <i class="material-icons"> work_outline</i>
+                <a>Client</a>
+            </div>
             <div class="item active" (click)="DepartmentComponent();">
                 <i class="material-icons">supervisor_account</i>
                 <a>Create Department</a>
@@ -43,17 +51,24 @@
                 <i class="material-icons">group_add</i>
                 <a>Create Team</a>
             </div>
-            <div class="item" (click)="UserComponent();">
-                <i class="material-icons">person_add</i>
-                <a>Create User</a>
-            </div>
-            <div class="item" (click)="CompanyComponent();">
-                <i class="material-icons"> work_outline</i>
-                <a>Client</a>
-            </div>
             <div class="item" (click)="TagComponent();">
                 <i class="fas fa-tag"></i>
                 <a>Create Tag</a>
+            </div>
+
+            <div class="item" (click)="Assign_TeamComponent();">
+                <i class="material-icons">group_add</i>
+                <a>Assign user to Team</a>
+            </div>
+
+            <div class="item" (click)="questionsComponent();">
+                <i class="material-icons">question_answer</i>
+                <a>Questions</a>
+            </div>
+
+            <div class="item" (click)="questionsListComponent();">
+                <i class="material-icons">question_answer</i>
+                <a>Questions list</a>
             </div>
 
             <div class="item" (click)="dashBoardComponent();">
@@ -89,6 +104,9 @@
         <app-tag *ngIf="loadTagComponent"></app-tag>
         <app-dashboard *ngIf="loadgraphComponent"></app-dashboard>
         <app-all-user *ngIf="viewUserdetails"></app-all-user>
+        <app-assign-team *ngIf="loadAssignTeamComponent"></app-assign-team>
+        <app-questions *ngIf="loadQuestionsComponent"></app-questions>
+        <app-questionslist *ngIf="loadQuestionsListComponent"></app-questionslist>
     </div>
 
     <appFooter-component></appFooter-component>

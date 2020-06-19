@@ -1,0 +1,10 @@
+.mat-raised-button {
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-top: 30px;
+    width: 70px;
+    height: 40px;
+    display: table-cell;
+    margin-right: 8px;
+    background-color: #CCD1D1;
+  }

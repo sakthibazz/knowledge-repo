@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { CompayName } from '../admin_shared/CompanyNames';
 import { DepartmentNames } from '../admin_shared/DepartmentName';
 import { ProjectNames } from '../admin_shared/ProjectName';
-
+import { TeamName } from '../admin_shared/TeamName';
 
 @Injectable({
   providedIn: 'root'
@@ -48,4 +48,22 @@ export class CreateUserService {
   getTeamName(selectedCompany: string, selected_Department: string,selected_Project:string): Observable<any> {
     return this.http.get<Array<ProjectNames>>(this.baseUrl + '/api/dropbox/admin/getTeam/' + selectedCompany + '/' + selected_Department+'/'+selected_Project);
   }
+
+  //get All Team Names 
+  getAllTeamNames(): Observable<any> {
+    return this.http.get<Array<TeamName>>(this.baseUrl + '/api/dropbox/admin/getAllTeam');
+  }
+
+  //Create user to team
+  createUserTeam(createUserTeamData): Observable<any> {
+    var create: {'eMail': string ,'userTeamName':string} = { 'eMail': createUserTeamData.userName ,'userTeamName':createUserTeamData.userTeamName};
+    return this.http.post(this.baseUrl + '/api/dropbox/admin/assigneUser', create
+      , {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      }
+    );
+  }
+
 }

@@ -89,8 +89,8 @@ export class UploadComponent implements OnInit {
         this.uploadFlag = false;
         if (events.body) {
           this.setMessage = { message: 'File Upload Success', msg: true };
-        } else {
           this.setMessage = { message: 'Unable To Upload File', error: true };
+        } else {
         }
       }
     })

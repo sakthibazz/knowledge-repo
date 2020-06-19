@@ -41,6 +41,10 @@ import { AllUserComponent } from './admin/all-user/all-user.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LandingPageComponent } from './admin/landing-page/landing-page.component';
+import { AssignTeamComponent } from './admin/assign-team/assign-team.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { QuestionsComponent } from './admin/questions/questions.component';
+import { QuestionslistComponent } from './admin/questionslist/questionslist.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +86,12 @@ import { LandingPageComponent } from './admin/landing-page/landing-page.componen
   
     SignUpComponent,
   
-    LandingPageComponent
+    LandingPageComponent,
+    AssignTeamComponent,
+  
+    QuestionsComponent,
+  
+    QuestionslistComponent
   ],
   imports: [
     BrowserModule,
@@ -102,7 +111,8 @@ import { LandingPageComponent } from './admin/landing-page/landing-page.componen
     BrowserModule,
     ChartsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   exports: [
     MatTableModule,

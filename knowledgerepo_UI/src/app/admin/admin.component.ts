@@ -151,7 +151,7 @@ export class AdminComponent implements OnInit {
     this.loadQuestionsComponent = false;
     this.loadQuestionsListComponent = false;
   }
-  Assign_TeamComponent() {
+  AssignTeamComponent() {
     this.loadCompanyComponent = false;
     this.loadDepartmentCompnent = false;
     this.loadProjectComponent = false;

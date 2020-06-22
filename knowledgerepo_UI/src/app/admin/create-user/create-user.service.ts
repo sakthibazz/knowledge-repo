@@ -55,8 +55,8 @@ export class CreateUserService {
   }
 
   //Create user to team
-  createUserTeam(createUserTeamData): Observable<any> {
-    var create: {'eMail': string ,'userTeamName':string} = { 'eMail': createUserTeamData.userName ,'userTeamName':createUserTeamData.userTeamName};
+  createUserTeam(createUserTeamData,val): Observable<any> {
+    var create: {'eMail': string ,'userTeamName':string} = { 'eMail': createUserTeamData.userName ,'userTeamName':val};
     return this.http.post(this.baseUrl + '/api/dropbox/admin/assigneUser', create
       , {
         headers: new HttpHeaders({
@@ -67,3 +67,4 @@ export class CreateUserService {
   }
 
 }
+

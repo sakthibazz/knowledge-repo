@@ -99,8 +99,14 @@ export class AssignTeamComponent implements OnInit {
     // if (this.assignUserData.invalid) {
     //   return;
     // }
-      console.log(this.assignUserData.value)
-      this._createUserService.createUserTeam(this.assignUserData.value).subscribe(resp => {
+    let k =[];
+
+       k= this.assignUserData.value.userTeamName
+       var object = k.reduce(
+         (obj, item) => Object.assign(obj, {[item.teamId]:  item.teamName }), {});
+
+
+      this._createUserService.createUserTeam(this.assignUserData.value, Object.values(object).toString()).subscribe(resp => {
       console.log("response Object ", resp);
       this.msg = resp.msg;
       this.status = resp.status.toUpperCase();

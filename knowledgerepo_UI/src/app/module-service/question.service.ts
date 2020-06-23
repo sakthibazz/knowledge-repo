@@ -11,7 +11,8 @@ export class QuestionService {
   constructor(private http: HttpClient) { }
 
   createQuestion(addQuestions): Observable<any> {
-    var create: { 'clientName': string, 'jobFunction': string, 'question': string, 'answer': string, 'topic': string } = { 'clientName': addQuestions.clientName, 'jobFunction': addQuestions.jobFunction, 'question': addQuestions.question, 'answer': addQuestions.answer, 'topic': addQuestions.topic };
+    var create: { 'clientId': number, 'jobFunction': string, 'question': string, 'answer': string, 'topic': string } =
+     { 'clientId': addQuestions.clientId, 'jobFunction': addQuestions.jobFunction, 'question': addQuestions.question, 'answer': addQuestions.answer, 'topic': addQuestions.topic };
     return this.http.post(this.baseUrl + '/api/dropbox/admin/addQuestion', create
       , {
         headers: new HttpHeaders({

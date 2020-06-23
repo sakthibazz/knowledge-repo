@@ -33,7 +33,7 @@ export class QuestionsComponent implements OnInit {
     })
   
     this.addQuestions = this.formBuilder.group({
-      clientName: ['', [Validators.required, Validators.minLength(1)]],
+      clientId: ['', [Validators.required, Validators.minLength(1)]],
       jobFunction: ['', [Validators.required, Validators.minLength(2)]],
       question: ['', [Validators.required, Validators.minLength(2)]],
       answer: ['', [Validators.required, Validators.minLength(2)]],
@@ -46,6 +46,7 @@ export class QuestionsComponent implements OnInit {
       return;
     }
     console.log("output Test",this.addQuestions.value.companyName)
+    // console.log(this.addQuestions.value);
     this.questionSubscription$ = this._questionService.createQuestion(this.addQuestions.value).subscribe(resp => {
       this.msg = resp.msg;
       this.status = resp.status.toUpperCase();

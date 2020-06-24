@@ -13,9 +13,11 @@ import { ShowComponent } from './user/show/show.component';
 import { UploadComponent } from './user/upload/upload.component';
 import { AppGuard } from './app.guard';
 import { SignUpComponent} from './sign-up/sign-up.component';
+import { LandingPageComponent } from './admin/landing-page/landing-page.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
-  { path: '', component: LogInBodyComponent },
+  { path: '', component: LandingPageComponent },
   { path: 'login', component: LogInBodyComponent },
   {path: 'signup',component:SignUpComponent},
   {path: 'admin', component: AdminComponent,  canActivate: [AppGuard],children: [
@@ -52,7 +54,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 

@@ -45,6 +45,8 @@ import { AssignTeamComponent } from './admin/assign-team/assign-team.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { QuestionsComponent } from './admin/questions/questions.component';
 import { QuestionslistComponent } from './admin/questionslist/questionslist.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AllQuestionsComponent } from './admin/all-questions/all-questions.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,9 @@ import { QuestionslistComponent } from './admin/questionslist/questionslist.comp
   
     QuestionsComponent,
   
-    QuestionslistComponent
+    QuestionslistComponent,
+  
+    AllQuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +116,9 @@ import { QuestionslistComponent } from './admin/questionslist/questionslist.comp
     ChartsModule,
     MatTableModule,
     MatPaginatorModule,
+    Ng2SearchPipeModule,
     NgMultiSelectDropDownModule.forRoot()
+    
   ],
   exports: [
     MatTableModule,

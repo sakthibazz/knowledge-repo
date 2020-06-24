@@ -28,4 +28,12 @@ export class DepartmentService {
   getCompanyName(): Observable<any> {
     return this.http.get<Array<CompayName>>(this.baseUrl + '/api/dropbox/admin/getCompanyName');
   }
+  //get Question List
+  public getQuestionsList() : Observable<any> {
+    return this.http.get(this.baseUrl + '/api/dropbox/admin/getAllQuestion');
+  }
+  //get Questions List Based on Client
+  public getClientQuestionsList(clientId:number) : Observable<any>{
+    return this.http.get(this.baseUrl + '/api/dropbox/admin/getQuestion/' +clientId)
+  }
 }

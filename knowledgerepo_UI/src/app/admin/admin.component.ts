@@ -23,7 +23,6 @@ export class AdminComponent implements OnInit {
   private viewUserdetails: boolean = false;
   private loadAssignTeamComponent: boolean = false;
   private loadQuestionsComponent: boolean = false;
-  private loadQuestionsListComponent: boolean = false;
 
   constructor(private _storage: StorageService) { }
   userName: String;
@@ -59,7 +58,6 @@ export class AdminComponent implements OnInit {
     this.loadCompanyComponent = true;
     this.loadAssignTeamComponent = false;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   DepartmentComponent() {
     this.loadCompanyComponent = false;
@@ -72,7 +70,6 @@ export class AdminComponent implements OnInit {
     this.loadAssignTeamComponent = false;
     this.loadDepartmentCompnent = true;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   ProjectComponent() {
     this.loadCompanyComponent = false;
@@ -85,7 +82,6 @@ export class AdminComponent implements OnInit {
     this.loadAssignTeamComponent = false;
     this.loadProjectComponent = true;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   TeamComponent() {
     this.loadCompanyComponent = false;
@@ -97,7 +93,6 @@ export class AdminComponent implements OnInit {
     this.viewUserdetails = false;
     this.loadAssignTeamComponent = false;
     this.loadTeamComponent = true;
-    this.loadQuestionsListComponent = false;
   }
   UserComponent() {
     this.loadCompanyComponent = false;
@@ -110,7 +105,6 @@ export class AdminComponent implements OnInit {
     this.loadAssignTeamComponent = false;
     this.loadUserComponent = true;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   TagComponent() {
     this.loadCompanyComponent = false;
@@ -123,7 +117,6 @@ export class AdminComponent implements OnInit {
     this.viewUserdetails = false;
     this.loadAssignTeamComponent = false;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   dashBoardComponent() {
     this.loadCompanyComponent = false;
@@ -136,7 +129,6 @@ export class AdminComponent implements OnInit {
     this.viewUserdetails = false;
     this.loadAssignTeamComponent = false;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   viewUser() {
     this.viewUserdetails = true;
@@ -149,7 +141,6 @@ export class AdminComponent implements OnInit {
     this.loadgraphComponent = false;
     this.loadAssignTeamComponent = false;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   AssignTeamComponent() {
     this.loadCompanyComponent = false;
@@ -162,7 +153,6 @@ export class AdminComponent implements OnInit {
     this.loadTeamComponent = false;
     this.loadAssignTeamComponent = true;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = false;
   }
   questionsComponent() {
     this.loadCompanyComponent = false;
@@ -175,20 +165,18 @@ export class AdminComponent implements OnInit {
     this.loadTeamComponent = false;
     this.loadAssignTeamComponent = false;
     this.loadQuestionsComponent = true;
-    this.loadQuestionsListComponent = false;
   }
    questionsListComponent() {
     this.loadCompanyComponent = false;
     this.loadDepartmentCompnent = false;
     this.loadProjectComponent = false;
     this.loadUserComponent = false;
+    this.viewUserdetails = false;
     this.loadTagComponent = false;
     this.loadgraphComponent = false;
-    this.viewUserdetails = false;
     this.loadTeamComponent = false;
     this.loadAssignTeamComponent = false;
     this.loadQuestionsComponent = false;
-    this.loadQuestionsListComponent = true;
    }
   //Log Out
   logOut() {

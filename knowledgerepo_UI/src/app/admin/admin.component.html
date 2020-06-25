@@ -66,11 +66,6 @@
                 <a>Questions</a>
             </div>
 
-            <div class="item" (click)="questionsListComponent();">
-                <i class="material-icons">question_answer</i>
-                <a>Questions list</a>
-            </div>
-
             <div class="item" (click)="dashBoardComponent();">
                 <i class="fas fa-chart-line"></i>
                 <a>Dash Board</a>
@@ -106,7 +101,6 @@
         <app-all-user *ngIf="viewUserdetails"></app-all-user>
         <app-assign-team *ngIf="loadAssignTeamComponent"></app-assign-team>
         <app-questions *ngIf="loadQuestionsComponent"></app-questions>
-        <app-questionslist *ngIf="loadQuestionsListComponent"></app-questionslist>
     </div>
 
     <appFooter-component></appFooter-component>

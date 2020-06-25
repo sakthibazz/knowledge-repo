@@ -16,7 +16,7 @@ export class QuestionService {
     return this.http.post(this.baseUrl + '/api/dropbox/admin/addQuestion', create
       , {
         headers: new HttpHeaders({
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'
         })
       }
     );

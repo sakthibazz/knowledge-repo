@@ -4,7 +4,7 @@
 <div class="topnav">
     <!-- <i class="material-icons">list</i> -->
     <!-- <i class="material-icons">dashboard</i> -->
-    <a href="/" class="admin">Admin DashBoard</a>
+    <!-- <a href="/" class="admin">Admin DashBoard</a> -->
     <div class="topnav-right">
         <div class="btn btn-primary" (click)="SignUpComponent()">
             <!-- <i class="material-icons">account_circle</i> -->
@@ -34,14 +34,14 @@
             </div> 
             <div *ngIf="show_topic">
                 <div class="item company_details" *ngFor="let topic of topicNames">
-                    {{ topic.topicName }}
+                    <p class="cur-point">{{ topic.topicName }}<span #TName class="hide"> {{ topic.topicId }} </span></p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 box-styles">
-        <app-all-questions *ngIf="loadAllQuestionsCompnent"></app-all-questions>
+        <app-all-questions *ngIf="loadAllQuestionsComponent"></app-all-questions>
         <!-- <app-all-questions-client *ngIf="loadQuestionsComponent"></app-all-questions-client> -->
         <div *ngIf="loadQuestionsComponent">
         <div class="row">

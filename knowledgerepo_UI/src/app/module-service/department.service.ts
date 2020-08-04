@@ -36,4 +36,8 @@ export class DepartmentService {
   public getClientQuestionsList(clientId:number) : Observable<any>{
     return this.http.get(this.baseUrl + '/api/dropbox/admin/getQuestion/' +clientId)
   }
+  //get Topic Name
+  getTopicName(): Observable<any>{
+    return this.http.get(this.baseUrl + '/api/dropbox/admin/getAllTopic');
+  }
 }

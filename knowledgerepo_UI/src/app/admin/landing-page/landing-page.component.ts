@@ -18,6 +18,7 @@ export class LandingPageComponent implements OnInit {
   companyNameSubscription: Subscription;
   questionSubscription:Subscription;
   questionClientSubscription:Subscription;
+  topicNameSubscription:Subscription;
   questionsClientList:string[];
   companyNames : string[];
   questionsList:string[];
@@ -30,8 +31,8 @@ export class LandingPageComponent implements OnInit {
   public clientId:number;
   public uniqueTopics: string[];
   private loadQuestionsComponent: boolean = false;
-  private loadAllQuestionsCompnent: boolean = true; 
-  public topicNames = [{id:1,topicName:"Angular"},{id:2,topicName:"HTML"},{id:3,topicName:"ReactJS"},{id:4,topicName:"HTML"}];
+  private loadAllQuestionsComponent: boolean = true; 
+  topicNames : string[];
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(private _storage: StorageService,private _companyNameService: DepartmentService) { }
   
@@ -41,8 +42,12 @@ export class LandingPageComponent implements OnInit {
     }, err => {
       this.setMessage = { message: 'Server Error /Server Unreachable!', error: true };
     });
-    this.uniqueTopics = _.uniqBy(this.topicNames,'topicName');
-    console.log(this.uniqueTopics);
+    this.topicNameSubscription = this._companyNameService.getTopicName().subscribe(res =>{
+      this.topicNames = res;
+      this.uniqueTopics = _.uniqBy(this.topicNames,'topicName');
+      console.log(this.uniqueTopics);
+    })
+   
   }
   toggle() {
     this.show = !this.show;
@@ -62,7 +67,7 @@ export class LandingPageComponent implements OnInit {
       this.setMessage = { message: 'Server Error /Server Unreachable!', error: true };
     })
     this.loadQuestionsComponent = true;
-    this.loadAllQuestionsCompnent = false;
+    this.loadAllQuestionsComponent = false;
   }
   SignUpComponent() {
     sessionStorage.clear();

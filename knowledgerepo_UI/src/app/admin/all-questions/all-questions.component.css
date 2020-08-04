@@ -15,7 +15,8 @@
  .border-styles{
      border-top: 1px solid #80808070;
      border-right: 1px solid #80808070;
-     height: 500px ;
+     height: 465px ;
+     overflow-x: auto;
  }
  .brd-style{
    border-top: 1px solid #80808070;
